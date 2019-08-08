@@ -1,0 +1,256 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>reveal.js</title>
+
+		<link rel="stylesheet" href="css/reset.css">
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/black.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/monokai.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+
+   </head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+			            <section>CSS Grid Layout</section>
+			            <section>Mavludakhon Kuchkaralieva</section>
+		        </section>
+
+				<section>
+					<section>What is CSS Grid ?</section>
+					<section>	
+			        	<p class="fragment" data-fragment-index="1">CSS Grid is a two dimensional layout system that can handle both columns and rows.</p>
+			        	<p class="fragment" data-fragment-index="2">The CSS Grid Layout Module offers a grid-based layout system, with rows and columns, making it easier to design web pages without having to use floats and positioning.</p>
+			        </section>
+			        <section>Can I use CSS Grid ?</section>
+			        <section>
+			        	<p class="fragment" data-fragment-index="1">CSS Grid is supported in the latest version of all major browsers.</p>
+			        	<img class="fragment" data-fragment-index="2" src="img/browser.png" alt="browser">
+			        </section>
+			     </section>
+
+			     <section>
+                 			<section>Today we learn:</section>
+                 			<section>
+                 					<ul>
+                 						<li>Grid container</li>
+                 						<li>Grid item</li>
+                 						<li>Basic properties</li>
+                 						<li>And other important proporties</li>
+                 				    </ul>
+                            </section>
+                </section>
+			
+			     <section>
+			     			<section>Grid Container</section>
+			     			<section>
+			     	  			<p class="fragment" data-fragment-index="1">The grid container is a parent of all grid items. To define grid container, we use <em>display</em> property with values: <em>grid</em> or <em>inline-grid</em></p>
+			     	  			<img class="fragment" data-fragment-index="2" src="img/display.png" alt="display" width="300" height="200">
+			          			<img class="fragment" data-fragment-index="3" src="img/disp_in.png" alt="display" width="300" height="200">
+			        		</section>
+			     </section>
+
+
+                <section>
+			     			<section>Grid Item</section>
+			     			<section>
+			     	  			<p class="fragment" data-fragment-index="1">The items that are direct children of the grid container. These are elements that will be placed on the grid.</p>
+			     	  			<img class="fragment" data-fragment-index="2" src="img/gr_item.png" alt="grid_items">
+			          		</section>
+			     </section>
+
+
+
+                <section>
+			     			<section>Basics we need to know:</section>
+			     			<section>
+			     	  			<img class="fragment" data-fragment-index="1" src="img/crl.png" alt="col-row-l">
+			          			<img class="fragment" data-fragment-index="2" src="img/line.png" alt="line" width="310" height="280">
+			          		</section>
+			          		<section>
+			          			<img src="img/pr1.png" alt="properties">
+			          			<p>With the help of these properties, we can adjust the gap size by using one of them</p>
+			          		</section>
+                            <section>
+                            	<h4>Examples:</h4>
+                            	<img class="fragment" data-fragment-index="1" src="img/ex.png" alt="Examples">
+
+                            </section>
+			     </section>
+                 <section>
+                 	<section>The grid-template-columns Property</section>
+                 	<section>
+                 		<p>The <em>grid-template-columns</em> property defines the number of columns in your grid layout, and it can define the width of each column.</p>
+                       <pre>
+                        .grid-container {
+                            display: grid;
+                            grid-template-columns: auto auto auto auto;
+                        }                     
+                        </pre>
+						
+						<pre>
+                        .grid-container {
+                            display: grid;
+                            grid-template-columns: 80px 200px auto 40px;
+                         }                  
+                        </pre>
+
+                        
+                        <img src="img/tcp.png" alt="grid-template-columns" width="250" height="100">
+                        <img src="img/tcp2.png" alt="grid-template-columns2" width="250" height="100">
+
+                 	</section>
+                    <section>The grid-template-rows Property</section>
+                    <section>
+                    	<p>The <em>grid-template-rows</em> property defines the height of each row.</p>
+                    	<pre>
+                       	.grid-container {
+                             display: grid;
+                             grid-template-rows: 80px 200px;
+                         }                     
+                        </pre>
+                        <img src="img/trp.png" alt="grid-template-columns">
+
+
+
+                    </section>
+                    <section>The justify-content Property</section>
+                    <section>
+                    	<p>The <em>justify-content</em> property is used to align the whole grid inside the container.</p>
+                        <pre>
+                       	.grid-container {
+                            display: grid;
+                            justify-content: space-evenly;
+                         }                     
+                        </pre> 
+                        <img src="img/just.png" alt="justify-content">
+                        <pre>
+                       	space-around, space-between, center, start, end
+                        </pre>
+                         
+
+
+                    </section>
+                    <section>The align-content Property</section>
+                    <section>
+                    	<p>The <em>align-content</em> property is used to vertically align the whole grid inside the container.</p>
+
+                        <pre>
+                       	.grid-container {
+                            display: grid;
+                            height: 400px;
+                            align-content: center;
+                        }                     
+                        </pre> 
+                        <img src="img/just.png" alt="justify-content">
+                        <pre>
+                       	space-around, space-between, center, start, end
+                        </pre>
+                    </section>
+                 </section>
+                
+                <section>
+                	<section>The grid-column Property</section>
+                	<section>
+                		<p>The grid-column property defines on which column(s) to place an item. You define where the item will start, and where the item will end.</p>
+                		<pre>
+                        .item1 {
+                            grid-column: 1 / 5;
+                         }
+                		</pre>
+
+                        <pre>
+                        .item1 {
+                            grid-column: 1 / span 3;
+                         }
+                        </pre>
+                        <img src="img/last1.png" alt="picture">
+
+                	</section>
+                    <section>The grid-row Property</section>
+                     <section>
+                     	<p>The grid-row property defines on which row to place an item. You define where the item will start, and where the item will end.</p>
+                      <pre>
+                       .item1 {
+                           grid-row: 1 / 4;
+                        }
+                      </pre>
+                      <pre>
+                       .item1 {
+                           grid-row: 1 / span 2;
+                        }
+                      </pre>
+                       <img src="img/last2.png" alt="picture">
+                     </section>
+
+
+
+                    <section>The grid-area Property</section>
+                    <section>
+                    	<p>The grid-area property can be used as a shorthand property for the grid-row-start, grid-column-start, grid-row-end and the grid-column-end properties.</p>
+
+                    	<pre>
+                        .item8 {
+                             grid-area: 1 / 2 / 5 / 6;
+                        }	
+                    	</pre>
+
+                        <pre>
+                        .item8 {
+                            grid-area: 2 / 1 / span 2 / span 3;
+                        }
+                        </pre>
+
+                    	<img src="img/last3.png" alt="picture">
+
+                    </section>
+                    
+                </section>
+                 
+                 <section>
+                 	References:
+                 	<a href="https://www.w3schools.com/css/css_grid.asp">https://www.w3schools.com/css/css_grid.asp</a>
+                 	<a href="https://css-tricks.com/snippets/css/complete-guide-grid/">https://css-tricks.com/snippets/css/complete-guide-grid/</a>
+                 	<a href="https://gridbyexample.com/examples/">https://gridbyexample.com/examples/</a>
+                 	<a href="https://www.slideshare.net/JasonYingling/introducing-css-grid">https://www.slideshare.net/JasonYingling/introducing-css-grid</a>
+                 </section>
+
+
+			     <section>Thank for pay attention! </section>
+
+            </div>
+		</div>
+
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info about config & dependencies:
+			// - https://github.com/hakimel/reveal.js#configuration
+			// - https://github.com/hakimel/reveal.js#dependencies
+			Reveal.initialize({
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true }
+				]
+			});
+		</script>
+	</body>
+</html>
